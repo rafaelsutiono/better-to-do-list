@@ -44,7 +44,7 @@ export function TodoForm({ addTodo }) {
       />
 
       </div>
-      <button className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 border-b-4  hover:border-pink-500 rounded" style={{ borderRadius: "20px" }} onClick={handleSubmit}>
+      <button className="bg-yellow-700 hover:bg-yellow-600 text-white font-bold py-2 px-4 border-b-4  hover:border-yellow-700 rounded" style={{ borderRadius: "20px" }} onClick={handleSubmit}>
         Add
       </button>
     </form>

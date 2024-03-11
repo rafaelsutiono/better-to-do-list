@@ -108,21 +108,14 @@ const Profile = () => {
   };
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 opacity-80">
       <div className="bg-white rounded-lg shadow-lg p-8">
         <h1 className="text-2xl font-bold mb-4 text-black">User Profile</h1>
-        <Link to="/homepage" className="text-blue-500 mb-4">
+        <Link to="/homepage" className="text-yellow-500 mb-4">
           <ArrowBackIcon />
         </Link>
         {user && (
           <div className="flex flex-col items-center">
-            {profilePic && (
-              <img
-                src={profilePic}
-                alt="Profile"
-                className="w-32 h-32 rounded-full mb-4"
-              />
-            )}
             <div className="mb-4">
               {isEditing ? (
                 <div className="flex items-center">
@@ -132,35 +125,42 @@ const Profile = () => {
                     onChange={handleTempUsernameChange}
                     className="px-2 py-1 border border-gray-300 rounded-lg ml-2 text-black"
                   />
-                  <CheckIcon onClick={handleSaveEdit} className="cursor-pointer text-green-500 ml-2" />
-                  <ClearIcon onClick={handleCancelEdit} className="cursor-pointer text-red-500 ml-2" />
+                  <CheckIcon onClick={handleSaveEdit} className="cursor-pointer text-yellow-500 ml-2" />
+                  <ClearIcon onClick={handleCancelEdit} className="cursor-pointer text-yellow-700 ml-2" />
                 </div>
               ) : (
                 <div className="flex items-center">
                   <span className="text-black">{username}</span>
-                  <EditIcon onClick={handleEdit} className="cursor-pointer text-blue-500 ml-2" />
+                  <EditIcon onClick={handleEdit} className="cursor-pointer text-yellow-500 ml-2" />
                 </div>
               )}
             </div>
+            {profilePic && (
+              <img
+                src={profilePic}
+                alt="Profile"
+                className="w-32 h-32 rounded-full mb-4"
+              />
+            )}
             <div>
               {selectedFile ? (
                 <div className="flex">
                   <button
                     onClick={handleUpload}
-                    className="bg-blue-400 text-white py-2 px-4 rounded-lg"
+                    className="bg-yellow-400 text-white py-2 px-4 rounded-lg"
                   >
                     Upload
                   </button>
                   <button
                     onClick={() => setSelectedFile(null)}
-                    className="bg-red-400 text-white py-2 px-4 rounded-lg ml-2"
+                    className="bg-yellow-700 text-white py-2 px-4 rounded-lg ml-2"
                   >
                     Cancel
                   </button>
                 </div>
               ) : (
-                <label htmlFor="profile-pic" className="cursor-pointer bg-blue-200 text-black py-2 px-4 rounded-lg">
-                  Change Picture
+                <label htmlFor="profile-pic" className="cursor-pointer bg-yellow-400 text-black py-2 px-4 rounded-lg">
+                  Edit Profile Picture
                 </label>
               )}
               <input

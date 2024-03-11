@@ -53,7 +53,7 @@ export function TodoItem({ completed, id, title }) {
           onChange={(e) => setEditedTitle(e.target.value)}
         />
         <button
-          className="flex-none focus:outline-none text-white bg-pink-300 hover:bg-pink-400 focus:ring-4 focus:ring-pink-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-pink-400 dark:hover:bg-pink-500 dark:focus:ring-pink-900"
+          className="flex-none focus:outline-none text-white bg-yellow-300 hover:bg-yellow-400 focus:ring-4 focus:ring-yellow-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-yellow-400 dark:hover:bg-yellow-500 dark:focus:ring-yellow-900"
           onClick={handleUpdate}
           disabled={editedTitle.length === 0}
         >
@@ -66,7 +66,7 @@ export function TodoItem({ completed, id, title }) {
       <>
         <div className="grow">{title}</div>
         <button
-          className="flex-none focus:outline-none text-white bg-blue-300 hover:bg-blue-400 focus:ring-4 focus:ring-blue-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-400 dark:hover:bg-blue-500 dark:focus:ring-blue-900"
+          className="flex-none focus:outline-none text-white bg-yellow-300 hover:bg-yellow-400 focus:ring-4 focus:ring-yellow-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-yellow-400 dark:hover:bg-yellow-500 dark:focus:ring-yellow-900"
           onClick={() => setIsEditing(true)}
         >
           Edit
@@ -80,14 +80,14 @@ export function TodoItem({ completed, id, title }) {
       <label className="flex w-full">
         <input
           id={`checkbox-${id}`}
-          className="form-checkbox h-5 w-5 text-blue-500 border-gray-300 rounded focus:ring-blue-400"
+          className="form-checkbox h-5 w-5 text-yellow-500 border-gray-300 rounded focus:ring-yellow-400"
           checked={isChecked}
           onChange={handleCheckedChange}
           type="checkbox"
         />
         {todoContent}
         <button
-          className="flex-none p-1.5 focus:outline-none text-white bg-red-300 hover:bg-red-400 focus:ring-4 focus:ring-red-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-red-900"
+          className="flex-none p-1.5 focus:outline-none text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-900"
           onClick={handleDelete}
         >
           Delete
